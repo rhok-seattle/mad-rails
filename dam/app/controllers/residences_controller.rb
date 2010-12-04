@@ -17,7 +17,7 @@ class ResidencesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @residence }
+      format.xml  { render :xml => @residence.to_xml(:include => [:photos]) }
     end
   end
 
@@ -25,6 +25,9 @@ class ResidencesController < ApplicationController
   # GET /residences/new.xml
   def new
     @residence = Residence.new
+    3.times do
+      @residence.photos.build
+    end
 
     respond_to do |format|
       format.html # new.html.erb

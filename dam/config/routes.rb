@@ -1,4 +1,6 @@
 Dam::Application.routes.draw do
+  root :to => "residences#new"
+
   resources :residences
 
   # The priority is based upon order of creation:

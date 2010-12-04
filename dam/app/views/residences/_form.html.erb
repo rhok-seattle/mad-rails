@@ -1,4 +1,4 @@
-<%= form_for(@residence) do |f| %>
+<%= form_for @residence, :html => {:multipart => true} do |f| %>
   <% if @residence.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@residence.errors.count, "error") %> prohibited this residence from being saved:</h2>
@@ -103,6 +103,14 @@
     <%= f.label :total_uninsured_loss %><br />
     <%= f.text_field :total_uninsured_loss %>
   </div>
+
+  <h2>Photos</h2>
+  <% f.fields_for :photos do |photo_f| -%>
+    <div class="field">
+      <%= photo_f.file_field :image %>
+    </div>
+  <% end -%>
+
   <div class="actions">
     <%= f.submit %>
   </div>
