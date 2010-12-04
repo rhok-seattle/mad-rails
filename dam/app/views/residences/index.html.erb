@@ -1,0 +1,67 @@
+<h1>Listing residences</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Middle name</th>
+    <th>Last name</th>
+    <th>Street address 1</th>
+    <th>Street address 2</th>
+    <th>City</th>
+    <th>County</th>
+    <th>Zip code</th>
+    <th>Occupant owner</th>
+    <th>Estimated predisaster fmv of structure</th>
+    <th>Estimated structure loss in dollars</th>
+    <th>Estimated personal property loss in dollars</th>
+    <th>Primary cause of damage</th>
+    <th>Type of insurance</th>
+    <th>Deductible</th>
+    <th>Is habitable</th>
+    <th>Is accessible</th>
+    <th>Category of damage</th>
+    <th>Description of damages</th>
+    <th>Contact name</th>
+    <th>Contact phone</th>
+    <th>Contact email</th>
+    <th>Total uninsured loss</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @residences.each do |residence| %>
+  <tr>
+    <td><%= residence.first_name %></td>
+    <td><%= residence.middle_name %></td>
+    <td><%= residence.last_name %></td>
+    <td><%= residence.street_address_1 %></td>
+    <td><%= residence.street_address_2 %></td>
+    <td><%= residence.city %></td>
+    <td><%= residence.county %></td>
+    <td><%= residence.zip_code %></td>
+    <td><%= residence.occupant_owner %></td>
+    <td><%= residence.estimated_predisaster_FMV_of_structure %></td>
+    <td><%= residence.estimated_structure_loss_in_dollars %></td>
+    <td><%= residence.estimated_personal_property_loss_in_dollars %></td>
+    <td><%= residence.primary_cause_of_damage %></td>
+    <td><%= residence.type_of_insurance %></td>
+    <td><%= residence.deductible %></td>
+    <td><%= residence.is_habitable %></td>
+    <td><%= residence.is_accessible %></td>
+    <td><%= residence.category_of_damage %></td>
+    <td><%= residence.description_of_damages %></td>
+    <td><%= residence.contact_name %></td>
+    <td><%= residence.contact_phone %></td>
+    <td><%= residence.contact_email %></td>
+    <td><%= residence.total_uninsured_loss %></td>
+    <td><%= link_to 'Show', residence %></td>
+    <td><%= link_to 'Edit', edit_residence_path(residence) %></td>
+    <td><%= link_to 'Destroy', residence, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Residence', new_residence_path %>

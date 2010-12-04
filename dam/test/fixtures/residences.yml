@@ -1,0 +1,51 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  street_address_1: MyString
+  street_address_2: MyString
+  city: MyString
+  county: MyString
+  zip_code: MyString
+  occupant_owner: false
+  estimated_predisaster_FMV_of_structure: 1
+  estimated_structure_loss_in_dollars: 1
+  estimated_personal_property_loss_in_dollars: 1
+  primary_cause_of_damage: MyText
+  type_of_insurance: MyString
+  deductible: 1
+  is_habitable: false
+  is_accessible: false
+  category_of_damage: MyString
+  description_of_damages: MyText
+  contact_name: MyString
+  contact_phone: MyString
+  contact_email: MyString
+  total_uninsured_loss: 1
+
+two:
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  street_address_1: MyString
+  street_address_2: MyString
+  city: MyString
+  county: MyString
+  zip_code: MyString
+  occupant_owner: false
+  estimated_predisaster_FMV_of_structure: 1
+  estimated_structure_loss_in_dollars: 1
+  estimated_personal_property_loss_in_dollars: 1
+  primary_cause_of_damage: MyText
+  type_of_insurance: MyString
+  deductible: 1
+  is_habitable: false
+  is_accessible: false
+  category_of_damage: MyString
+  description_of_damages: MyText
+  contact_name: MyString
+  contact_phone: MyString
+  contact_email: MyString
+  total_uninsured_loss: 1

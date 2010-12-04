@@ -1,0 +1,120 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @residence.first_name %>
+</p>
+
+<p>
+  <b>Middle name:</b>
+  <%= @residence.middle_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @residence.last_name %>
+</p>
+
+<p>
+  <b>Street address 1:</b>
+  <%= @residence.street_address_1 %>
+</p>
+
+<p>
+  <b>Street address 2:</b>
+  <%= @residence.street_address_2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @residence.city %>
+</p>
+
+<p>
+  <b>County:</b>
+  <%= @residence.county %>
+</p>
+
+<p>
+  <b>Zip code:</b>
+  <%= @residence.zip_code %>
+</p>
+
+<p>
+  <b>Occupant owner:</b>
+  <%= @residence.occupant_owner %>
+</p>
+
+<p>
+  <b>Estimated predisaster fmv of structure:</b>
+  <%= @residence.estimated_predisaster_FMV_of_structure %>
+</p>
+
+<p>
+  <b>Estimated structure loss in dollars:</b>
+  <%= @residence.estimated_structure_loss_in_dollars %>
+</p>
+
+<p>
+  <b>Estimated personal property loss in dollars:</b>
+  <%= @residence.estimated_personal_property_loss_in_dollars %>
+</p>
+
+<p>
+  <b>Primary cause of damage:</b>
+  <%= @residence.primary_cause_of_damage %>
+</p>
+
+<p>
+  <b>Type of insurance:</b>
+  <%= @residence.type_of_insurance %>
+</p>
+
+<p>
+  <b>Deductible:</b>
+  <%= @residence.deductible %>
+</p>
+
+<p>
+  <b>Is habitable:</b>
+  <%= @residence.is_habitable %>
+</p>
+
+<p>
+  <b>Is accessible:</b>
+  <%= @residence.is_accessible %>
+</p>
+
+<p>
+  <b>Category of damage:</b>
+  <%= @residence.category_of_damage %>
+</p>
+
+<p>
+  <b>Description of damages:</b>
+  <%= @residence.description_of_damages %>
+</p>
+
+<p>
+  <b>Contact name:</b>
+  <%= @residence.contact_name %>
+</p>
+
+<p>
+  <b>Contact phone:</b>
+  <%= @residence.contact_phone %>
+</p>
+
+<p>
+  <b>Contact email:</b>
+  <%= @residence.contact_email %>
+</p>
+
+<p>
+  <b>Total uninsured loss:</b>
+  <%= @residence.total_uninsured_loss %>
+</p>
+
+
+<%= link_to 'Edit', edit_residence_path(@residence) %> |
+<%= link_to 'Back', residences_path %>

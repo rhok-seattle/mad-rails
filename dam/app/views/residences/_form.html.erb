@@ -1,0 +1,109 @@
+<%= form_for(@residence) do |f| %>
+  <% if @residence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@residence.errors.count, "error") %> prohibited this residence from being saved:</h2>
+
+      <ul>
+      <% @residence.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name %><br />
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :street_address_1 %><br />
+    <%= f.text_field :street_address_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :street_address_2 %><br />
+    <%= f.text_field :street_address_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :county %><br />
+    <%= f.text_field :county %>
+  </div>
+  <div class="field">
+    <%= f.label :zip_code %><br />
+    <%= f.text_field :zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :occupant_owner %><br />
+    <%= f.check_box :occupant_owner %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_predisaster_FMV_of_structure %><br />
+    <%= f.text_field :estimated_predisaster_FMV_of_structure %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_structure_loss_in_dollars %><br />
+    <%= f.text_field :estimated_structure_loss_in_dollars %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_personal_property_loss_in_dollars %><br />
+    <%= f.text_field :estimated_personal_property_loss_in_dollars %>
+  </div>
+  <div class="field">
+    <%= f.label :primary_cause_of_damage %><br />
+    <%= f.text_area :primary_cause_of_damage %>
+  </div>
+  <div class="field">
+    <%= f.label :type_of_insurance %><br />
+    <%= f.text_field :type_of_insurance %>
+  </div>
+  <div class="field">
+    <%= f.label :deductible %><br />
+    <%= f.text_field :deductible %>
+  </div>
+  <div class="field">
+    <%= f.label :is_habitable %><br />
+    <%= f.check_box :is_habitable %>
+  </div>
+  <div class="field">
+    <%= f.label :is_accessible %><br />
+    <%= f.check_box :is_accessible %>
+  </div>
+  <div class="field">
+    <%= f.label :category_of_damage %><br />
+    <%= f.text_field :category_of_damage %>
+  </div>
+  <div class="field">
+    <%= f.label :description_of_damages %><br />
+    <%= f.text_area :description_of_damages %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_name %><br />
+    <%= f.text_field :contact_name %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_phone %><br />
+    <%= f.text_field :contact_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_email %><br />
+    <%= f.text_field :contact_email %>
+  </div>
+  <div class="field">
+    <%= f.label :total_uninsured_loss %><br />
+    <%= f.text_field :total_uninsured_loss %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
