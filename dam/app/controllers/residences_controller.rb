@@ -1,6 +1,7 @@
 class ResidencesController < ApplicationController
   # GET /residences
   # GET /residences.xml
+  protect_from_forgery :except => [:create]
   def index
     @residences = Residence.all
 

@@ -10,7 +10,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101204225028) do
+ActiveRecord::Schema.define(:version => 20101205214235) do
+
+  create_table "addresses", :force => true do |t|
+    t.text     "street"
+    t.string   "city"
+    t.integer  "county_id"
+    t.string   "state"
+    t.string   "zip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "causes", :force => true do |t|
+    t.string   "cause"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "counties", :force => true do |t|
+    t.string   "county"
+    t.string   "fipscode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "photos", :force => true do |t|
     t.integer  "residence_id"
@@ -46,6 +75,12 @@ ActiveRecord::Schema.define(:version => 20101204225028) do
     t.string   "contact_phone"
     t.string   "contact_email"
     t.integer  "total_uninsured_loss"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "states", :force => true do |t|
+    t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

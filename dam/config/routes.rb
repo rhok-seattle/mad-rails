@@ -1,4 +1,14 @@
 Dam::Application.routes.draw do
+  resources :contacts
+
+  resources :addresses
+
+  resources :counties
+
+  resources :categories
+
+  resources :causes
+
   root :to => "residences#new"
 
   resources :residences

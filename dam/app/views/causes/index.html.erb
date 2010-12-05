@@ -1,0 +1,23 @@
+<h1>Listing causes</h1>
+
+<table>
+  <tr>
+    <th>Cause</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @causes.each do |cause| %>
+  <tr>
+    <td><%= cause.cause %></td>
+    <td><%= link_to 'Show', cause %></td>
+    <td><%= link_to 'Edit', edit_cause_path(cause) %></td>
+    <td><%= link_to 'Destroy', cause, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cause', new_cause_path %>
